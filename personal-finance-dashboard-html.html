@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WealthWise - Personal Finance Dashboard</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: #f9fafb;
+    }
+    .progress-bar {
+      width: 100%;
+      background-color: #e5e7eb;
+      border-radius: 9999px;
+      height: 0.5rem;
+    }
+    .progress-fill {
+      height: 0.5rem;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- App Header -->
+  <header class="bg-white shadow px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center">
+      <div class="text-blue-600 font-bold text-xl mr-2">WealthWise</div>
+      <span class="text-sm bg-blue-100 text-blue-800 font-medium px-2 py-0.5 rounded">Pro</span>
+    </div>
+    <div class="flex items-center">
+      <button class="p-2 mr-2 text-gray-500 rounded-full hover:bg-gray-100">
+        🔔
+      </button>
+      <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-medium">
+        JD
+      </div>
+    </div>
+  </header>
+  
+  <!-- Main Navigation -->
+  <nav class="bg-white shadow-sm px-4 py-2 flex items-center overflow-x-auto">
+    <button class="px-4 py-2 mr-2 rounded-lg font-medium bg-blue-100 text-blue-700">
+      Overview
+    </button>
+    <button class="px-4 py-2 mr-2 rounded-lg font-medium text-gray-500">
+      Transactions
+    </button>
+    <button class="px-4 py-2 mr-2 rounded-lg font-medium text-gray-500">
+      Budgets
+    </button>
+    <button class="px-4 py-2 mr-2 rounded-lg font-medium text-gray-500">
+      Goals
+    </button>
+    <button class="px-4 py-2 rounded-lg font-medium text-gray-500">
+      Insights
+    </button>
+  </nav>
+  
+  <!-- Main Content -->
+  <main class="p-4">
+    <!-- Welcome Section -->
+    <section class="mb-6">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h1 class="text-xl font-bold text-gray-900">Welcome back, John!</h1>
+          <p class="text-gray-600">Friday, March 21, 2025</p>
+        </div>
+        <button class="px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 shadow-sm">
+          + Add Transaction
+        </button>
+      </div>
+      
+      <!-- Financial Summary -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+          <div class="text-gray-500 text-sm font-medium mb-1">Total Balance</div>
+          <div class="text-2xl font-bold text-gray-900">$57,213.15</div>
+          <div class="text-sm text-green-600 font-medium mt-1">↑ 2.4% this month</div>
+        </div>
+        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+          <div class="text-gray-500 text-sm font-medium mb-1">Income (Mar)</div>
+          <div class="text-2xl font-bold text-gray-900">$6,250.00</div>
+          <div class="text-sm text-green-600 font-medium mt-1">↑ 5.2% vs last month</div>
+        </div>
+        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+          <div class="text-gray-500 text-sm font-medium mb-1">Spending (Mar)</div>
+          <div class="text-2xl font-bold text-gray-900">$4,260.50</div>
+          <div class="text-sm text-red-600 font-medium mt-1">↑ 8.1% vs last month</div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Main Dashboard Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Accounts Section -->
+      <section class="lg:col-span-2">
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 mb-6">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-lg font-bold text-gray-900">Your Accounts</h2>
+            <button class="text-sm text-blue-600 font-medium">+ Link Account</button>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+              <div class="flex items-center">
+                <div class="w-10 h-10 rounded-lg mr-3" style="background-color: #3b82f6;"></div>
+                <div>
+                  <div class="font-medium text-gray-900">Primary Checking</div>
+                  <div class="text-xs text-gray-500">First National Bank</div>
+                </div>
+              </div>
+              <div class="font-bold text-gray-900">$3,245.67</div>
+            </div>
+            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+              <div class="flex items-center">
+                <div class="w-10 h-10 rounded-lg mr-3" style="background-color: #10b981;"></div>
+                <div>
+                  <div class="font-medium text-gray-900">High-Yield Savings</div>
+                  <div class="text-xs text-gray-500">Online Banking Co.</div>
+                </div>
+              </div>
+              <div class="font-bold text-gray-900">$12,750.25</div>
+            </div>
+            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+              <div class="flex items-center">
+                <div class="w-10 h-10 rounded-lg mr-3" style="background-color: #ef4444;"></div>
+                <div>
+                  <div class="font-medium text-gray-900">Credit Card</div>
+                  <div class="text-xs text-gray-500">Rewards Plus</div>
+                </div>
+              </div>
+              <div class="font-bold text-red-600">-$1,432.89</div>
+            </div>
+            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+              <div class="flex items-center">
+                <div class="w-10 h-10 rounded-lg mr-3" style="background-color: #8b5cf6;"></div>
+                <div>
+                  <div class="font-medium text-gray-900">Investment Portfolio</div>
+                  <div class="text-xs text-gray-500">Wealth Investments</div>
+                </div>
+              </div>
+              <div class="font-bold text-gray-900">$42,650.12</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Recent Transactions -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-lg font-bold text-gray-900">Recent Transactions</h2>
+            <button class="text-sm text-blue-600 font-medium">View All</button>
+          </div>
+          <div class="space-y-2">
+            <div class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg cursor-pointer">
+              <div class="flex items-center">
+                <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mr-3 text-lg">
+                  🛒
+                </div>
+                <div>
+                  <div class="font-medium text-gray-900">Grocery Store</div>
+                  <div class="text-xs text-gray-500">Mar 20 • Groceries</div>
+                </div>
+              </div>
+              <div class="font-medium text-red-600">-$127.83</div>
+            </div>
+            <div class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg cursor-pointer">
+              <div class="flex items-center">
+                <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mr-3 text-lg">
+                  💼
+                </div>
+                <div>
+                  <div class="font-medium text-gray-900">Salary Deposit</div>
+                  <div class="text-xs text-gray-500">Mar 15 • Income</div>
+                </div>
+              </div>
+              <div class="font-medium text-green-600">+$3,250.00</div>
+            </div>
+            <div class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg cursor-pointer">
+              <div class="flex items-center">
+                <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mr-3 text-lg">
+                  📺
+                </div>
+                <div>
+                  <div class="font-medium text-gray-900">Netflix Subscription</div>
+                  <div class="text-xs text-gray-500">Mar 14 • Entertainment</div>
+                </div>
+              </div>
+              <div class="font-medium text-red-600">-$15.99</div>
+            </div>
+            <div class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg cursor-pointer">
+              <div class="flex items-center">
+                <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mr-3 text-lg">
+                  ⛽
+                </div>
+                <div>
+                  <div class="font-medium text-gray-900">Gas Station</div>
+                  <div class="text-xs text-gray-500">Mar 13 • Transportation</div>
+                </div>
+              </div>
+              <div class="font-medium text-red-600">-$45.67</div>
+            </div>
+            <div class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg cursor-pointer">
+              <div class="flex items-center">
+                <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mr-3 text-lg">
+                  🍽️
+                </div>
+                <div>
+                  <div class="font-medium text-gray-900">Restaurant</div>
+                  <div class="text-xs text-gray-500">Mar 12 • Dining Out</div>
+                </div>
+              </div>
+              <div class="font-medium text-red-600">-$78.50</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Right Column -->
+      <section class="space-y-6">
+        <!-- Monthly Spending -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-lg font-bold text-gray-900">Monthly Spending</h2>
+            <button class="text-sm text-blue-600 font-medium">Details →</button>
+          </div>
+          
+          <div class="space-y-3">
+            <div>
+              <div class="flex items-center justify-between mb-1
